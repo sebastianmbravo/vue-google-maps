@@ -2,6 +2,7 @@ import {load, loaded} from './manager.js'
 import Marker from './components/marker'
 import Polyline from './components/polyline'
 import Polygon from './components/polygon'
+import Route from './components/route'
 import Circle from './components/circle'
 import Rectangle from './components/rectangle'
 
@@ -29,7 +30,7 @@ const Cluster = (process.env.BUILD_DEV === '1')
 let GmapApi
 
 // export everything
-export {load, loaded, Marker, Polyline, Polygon, Circle, Cluster, Rectangle,
+export {load, loaded, Marker, Polyline, Polygon, Route, Circle, Cluster, Rectangle,
   InfoWindow, Map, PlaceInput, MapElementMixin, MapElementFactory, Autocomplete,
   MountableMixin, StreetViewPanorama}
 
@@ -62,6 +63,7 @@ export function install (Vue, options) {
     Vue.component('GmapInfoWindow', InfoWindow)
     Vue.component('GmapPolyline', Polyline)
     Vue.component('GmapPolygon', Polygon)
+    Vue.component('GmapRoute', Route)
     Vue.component('GmapCircle', Circle)
     Vue.component('GmapRectangle', Rectangle)
     Vue.component('GmapAutocomplete', Autocomplete)
